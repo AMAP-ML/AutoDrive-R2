@@ -1,9 +1,33 @@
-# 【ICLR2026】AutoDrive-R2: Incentivizing Reasoning and Self-Reflection Capacity for VLA Model in Autonomous Driving
+<div align="left">
 
-[![arXiv Paper](https://img.shields.io/badge/arXiv-2509.01944-b31b1b.svg)](https://arxiv.org/pdf/2509.01944)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+<p style="font-size: 160px;">
+<strong>🚗 AutoDrive-R2: Incentivizing Reasoning and Self-Reflection Capacity for VLA Model in Autonomous Driving</strong>
+</p>
 
-|[[📖 Paper](https://arxiv.org/pdf/2509.01944)] [[🤗 AutoDrive-R2-7B](https://huggingface.co/ZhenlongYuan/AutoDrive-R2-7B)] [[🤗 AutoDrive-R2-7B-COT-SFT](https://huggingface.co/ZhenlongYuan/AutoDrive-R2-7B-COT-SFT)] [[📊 All Data](https://huggingface.co/datasets/ZhenlongYuan/AutoDrive-R2-all-data/tree/main)]
+</div>
+
+<div align="center">
+
+<p>
+<strong>ICLR 2026</strong>
+</p>
+
+<p>
+Zhenlong Yuan<sup>*†</sup>, Chengxuan Qian<sup>*</sup>, Jing Tang, Rui Chen, Zijian Song, Lei Sun<sup>‡</sup>, Xiangxiang Chu, Yujun Cai, Dapeng Zhang<sup>§</sup>, Shuo Li
+</p>
+
+<p>
+<sup>*</sup> Equal contribution &nbsp; <sup>†</sup> Project Lead &nbsp; <sup>§</sup> Corresponding Author
+</p>
+
+[![Website](https://img.shields.io/badge/🌐_WEBSITE-0E8CCF?style=for-the-badge&labelColor=4A4A4A)](https://openreview.net/forum?id=KVWaCzJrrq)
+[![Paper](https://img.shields.io/badge/📄_PAPER-111111?style=for-the-badge&labelColor=4A4A4A)](https://arxiv.org/pdf/2509.01944)
+[![SFT Model](https://img.shields.io/badge/🤗_SFT_MODEL-FF7A3D?style=for-the-badge&labelColor=4A4A4A)](https://huggingface.co/ZhenlongYuan/AutoDrive-R2-7B-COT-SFT)
+[![RL Model](https://img.shields.io/badge/🤗_RL_MODEL-FF7A3D?style=for-the-badge&labelColor=4A4A4A)](https://huggingface.co/ZhenlongYuan/AutoDrive-R2-7B)
+[![Dataset](https://img.shields.io/badge/🤗_DATASET-E4B313?style=for-the-badge&labelColor=4A4A4A)](https://huggingface.co/datasets/ZhenlongYuan/AutoDrive-R2-all-data/tree/main)
+[![License](https://img.shields.io/badge/LICENSE-MIT-blue?style=for-the-badge&labelColor=4A4A4A)](LICENSE)
+
+</div>
 
 <p align="center">
     <img src="./images/1.png" width="90%" height="90%">
@@ -14,8 +38,6 @@
 AutoDrive-R2 is a specialized Vision-Language-Action (VLA) model designed for **autonomous driving trajectory prediction**, which elicits reasoning and self-reflection capacities through rule-based Reinforcement Learning (RL).
 
 Given a front-view camera image and historical vehicle status (position, velocity, acceleration, steering angle), AutoDrive-R2 predicts **future waypoints** at 0.5s intervals for the next 3 seconds.
-
----
 
 ## 🎯 Core Task
 
@@ -33,8 +55,6 @@ Given a front-view camera image and historical vehicle status (position, velocit
 3. **Logical Deductions**: Safety checks and path planning
 4. **Self-Reflection**: Validate predicted trajectory feasibility
 
----
-
 ## 🏗️ Architecture
 
 <p align="center">
@@ -46,16 +66,12 @@ Given a front-view camera image and historical vehicle status (position, velocit
     The second stage proposes an novel physics-grounded reward framework for RL optimization, which incorporates spatial alignment, vehicle dynamic, and temporal smoothness for reliable trajectory planning.
 </p>
 
----
-
 ## 📍 Features
 
 - **Qwen2.5-VL Base Model**: Leverages state-of-the-art vision-language capabilities
 - **Chain-of-Thought Reasoning**: Explicit reasoning steps for interpretable predictions
 - **Rule-based RL Training**: GRPO with physics-grounded rewards
 - **Multi-dataset Support**: Trained and evaluated on nuScenes and Waymo
-
----
 
 ## 🔍 Dataset
 
@@ -110,8 +126,6 @@ nuscenes/
 
 Download from Baidu Netdisk: [Link Coming Soon]
 
----
-
 ## 📐 Set up
 
 ```bash
@@ -129,8 +143,6 @@ pip install -r requirements.txt
 # Install flash-attention
 pip install flash-attn --no-build-isolation
 ```
-
----
 
 ## 🚀 Training
 
@@ -158,8 +170,6 @@ Fine-tune with GRPO using physics-grounded rewards:
 bash src/scripts/run_grpo_video_7B_6k.sh
 ```
 
----
-
 ## 🔮 Inference & Evaluation
 
 ### Evaluate on nuScenes
@@ -173,8 +183,6 @@ python AScripts/eval_nuscene.py
 ```bash
 python AScripts/eval_waymo.py
 ```
-
----
 
 ## 📜 Citation
 
@@ -190,8 +198,6 @@ If you find our work helpful for your research, please consider citing:
     url={https://openreview.net/forum?id=KVWaCzJrrq}
 }
 ```
-
----
 
 ## 🤝 Acknowledgements
 
