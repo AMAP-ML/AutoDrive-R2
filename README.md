@@ -63,9 +63,9 @@ Given a front-view camera image and historical vehicle status (position, velocit
 
 | Dataset | Samples | Description |
 |---------|---------|-------------|
-| `sft.json` | ~60K | SFT training data (raw) |
-| `sft_cot.json` | ~60K | SFT training data (with CoT reasoning) |
-| `rl.json` | ~60K | RL training data |
+| `sft.json` | ~6K | SFT training data (raw) |
+| `sft_cot.json` | ~6K | SFT training data (with CoT reasoning) |
+| `rl.json` | ~6K | RL training data |
 
 ### Evaluation Data
 
